@@ -8,7 +8,7 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="mysql-connector-java-8.0.28.jar"/>
 	<classpathentry kind="lib" path="jcalendar-1.4.jar"/>
-	<classpathentry kind="lib" path="E:/Download/commons-dbutils-1.7.jar"/>
-	<classpathentry kind="lib" path="E:/Download/rs2xml.jar"/>
+	<classpathentry kind="lib" path="commons-dbutils-1.7.jar"/>
+	<classpathentry kind="lib" path="rs2xml.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

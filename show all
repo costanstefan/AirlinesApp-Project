@@ -1,0 +1,981 @@
+[33mcommit 146934f36570777108e862deac7dfdf3792403b6[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Costan Stefan <stefan.costan22@yahoo.com>
+Date:   Mon Sep 19 20:38:10 2022 +0300
+
+    bootsrap project
+
+[1mdiff --git a/.classpath b/.classpath[m
+[1mnew file mode 100644[m
+[1mindex 0000000..a224e52[m
+[1m--- /dev/null[m
+[1m+++ b/.classpath[m
+[36m@@ -0,0 +1,14 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
+[32m+[m[32m<classpath>[m
+[32m+[m	[32m<classpathentry kind="src" path="src"/>[m
+[32m+[m	[32m<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/Java">[m
+[32m+[m		[32m<attributes>[m
+[32m+[m			[32m<attribute name="module" value="true"/>[m
+[32m+[m		[32m</attributes>[m
+[32m+[m	[32m</classpathentry>[m
+[32m+[m	[32m<classpathentry kind="lib" path="mysql-connector-java-8.0.28.jar"/>[m
+[32m+[m	[32m<classpathentry kind="lib" path="jcalendar-1.4.jar"/>[m
+[32m+[m	[32m<classpathentry kind="lib" path="E:/Download/commons-dbutils-1.7.jar"/>[m
+[32m+[m	[32m<classpathentry kind="lib" path="E:/Download/rs2xml.jar"/>[m
+[32m+[m	[32m<classpathentry kind="output" path="bin"/>[m
+[32m+[m[32m</classpath>[m
+[1mdiff --git a/.project b/.project[m
+[1mnew file mode 100644[m
+[1mindex 0000000..7677a30[m
+[1m--- /dev/null[m
+[1m+++ b/.project[m
+[36m@@ -0,0 +1,17 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
+[32m+[m[32m<projectDescription>[m
+[32m+[m	[32m<name>MyArilinesApplication</name>[m
+[32m+[m	[32m<comment></comment>[m
+[32m+[m	[32m<projects>[m
+[32m+[m	[32m</projects>[m
+[32m+[m	[32m<buildSpec>[m
+[32m+[m		[32m<buildCommand>[m
+[32m+[m			[32m<name>org.eclipse.jdt.core.javabuilder</name>[m
+[32m+[m			[32m<arguments>[m
+[32m+[m			[32m</arguments>[m
+[32m+[m		[32m</buildCommand>[m
+[32m+[m	[32m</buildSpec>[m
+[32m+[m	[32m<natures>[m
+[32m+[m		[32m<nature>org.eclipse.jdt.core.javanature</nature>[m
+[32m+[m	[32m</natures>[m
+[32m+[m[32m</projectDescription>[m
+[1mdiff --git a/.settings/org.eclipse.jdt.core.prefs b/.settings/org.eclipse.jdt.core.prefs[m
+[1mnew file mode 100644[m
+[1mindex 0000000..223b166[m
+[1m--- /dev/null[m
+[1m+++ b/.settings/org.eclipse.jdt.core.prefs[m
+[36m@@ -0,0 +1,14 @@[m
+[32m+[m[32meclipse.preferences.version=1[m
+[32m+[m[32morg.eclipse.jdt.core.compiler.codegen.inlineJsrBytecode=enabled[m
+[32m+[m[32morg.eclipse.jdt.core.compiler.codegen.targetPlatform=15[m
+[32m+[m[32morg.eclipse.jdt.core.compiler.codegen.unusedLocal=preserve[m
+[32m+[m[32morg.eclipse.jdt.core.compiler.compliance=15[m
+[32m+[m[32morg.eclipse.jdt.core.compiler.debug.lineNumber=generate[m
+[32m+[m[32morg.eclipse.jdt.core.compiler.debug.localVariable=generate[m
+[32m+[m[32morg.eclipse.jdt.core.compiler.debug.sourceFile=generate[m
+[32m+[m[32morg.eclipse.jdt.core.compiler.problem.assertIdentifier=error[m
+[32m+[m[32morg.eclipse.jdt.core.compiler.problem.enablePreviewFeatures=disabled[m
+[32m+[m[32morg.eclipse.jdt.core.compiler.problem.enumIdentifier=error[m
+[32m+[m[32morg.eclipse.jdt.core.compiler.problem.reportPreviewFeatures=warning[m
+[32m+[m[32morg.eclipse.jdt.core.compiler.release=enabled[m
+[32m+[m[32morg.eclipse.jdt.core.compiler.source=15[m
+[1mdiff --git a/AirplaneIcon.png b/AirplaneIcon.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..be0f0d1[m
+Binary files /dev/null and b/AirplaneIcon.png differ
+[1mdiff --git a/README.txt b/README.txt[m
+[1mnew file mode 100644[m
+[1mindex 0000000..8bb2fa3[m
+[1m--- /dev/null[m
+[1m+++ b/README.txt[m
+[36m@@ -0,0 +1,4 @@[m
+[32m+[m[32mTo run the main method:[m
+[32m+[m[32m1.open src folder[m
+[32m+[m[32m2.open UserIntroDates folder[m
+[32m+[m[32m3.open Login.java (main method).[m
+\ No newline at end of file[m
+[1mdiff --git a/bin/UserIntroDates/Cancelattion$1.class b/bin/UserIntroDates/Cancelattion$1.class[m
+[1mnew file mode 100644[m
+[1mindex 0000000..85871e2[m
+Binary files /dev/null and b/bin/UserIntroDates/Cancelattion$1.class differ
+[1mdiff --git a/bin/UserIntroDates/Cancelattion.class b/bin/UserIntroDates/Cancelattion.class[m
+[1mnew file mode 100644[m
+[1mindex 0000000..61e5c4f[m
+Binary files /dev/null and b/bin/UserIntroDates/Cancelattion.class differ
+[1mdiff --git a/bin/UserIntroDates/FirstPageFrame.class b/bin/UserIntroDates/FirstPageFrame.class[m
+[1mnew file mode 100644[m
+[1mindex 0000000..c09bd13[m
+Binary files /dev/null and b/bin/UserIntroDates/FirstPageFrame.class differ
+[1mdiff --git a/bin/UserIntroDates/FlightsManager$1.class b/bin/UserIntroDates/FlightsManager$1.class[m
+[1mnew file mode 100644[m
+[1mindex 0000000..24555b6[m
+Binary files /dev/null and b/bin/UserIntroDates/FlightsManager$1.class differ
+[1mdiff --git a/bin/UserIntroDates/FlightsManager$2.class b/bin/UserIntroDates/FlightsManager$2.class[m
+[1mnew file mode 100644[m
+[1mindex 0000000..bd69266[m
+Binary files /dev/null and b/bin/UserIntroDates/FlightsManager$2.class differ
+[1mdiff --git a/bin/UserIntroDates/FlightsManager.class b/bin/UserIntroDates/FlightsManager.class[m
+[1mnew file mode 100644[m
+[1mindex 0000000..bb71e8a[m
+Binary files /dev/null and b/bin/UserIntroDates/FlightsManager.class differ
+[1mdiff --git a/bin/UserIntroDates/Login.class b/bin/UserIntroDates/Login.class[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e699c64[m
+Binary files /dev/null and b/bin/UserIntroDates/Login.class differ
+[1mdiff --git a/bin/UserIntroDates/LoginFrame.class b/bin/UserIntroDates/LoginFrame.class[m
+[1mnew file mode 100644[m
+[1mindex 0000000..277c3a4[m
+Binary files /dev/null and b/bin/UserIntroDates/LoginFrame.class differ
+[1mdiff --git a/bin/UserIntroDates/MyTableModel.class b/bin/UserIntroDates/MyTableModel.class[m
+[1mnew file mode 100644[m
+[1mindex 0000000..2136b22[m
+Binary files /dev/null and b/bin/UserIntroDates/MyTableModel.class differ
+[1mdiff --git a/bin/UserIntroDates/PassengersManager$1.class b/bin/UserIntroDates/PassengersManager$1.class[m
+[1mnew file mode 100644[m
+[1mindex 0000000..63088b3[m
+Binary files /dev/null and b/bin/UserIntroDates/PassengersManager$1.class differ
+[1mdiff --git a/bin/UserIntroDates/PassengersManager$2.class b/bin/UserIntroDates/PassengersManager$2.class[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e602d55[m
+Binary files /dev/null and b/bin/UserIntroDates/PassengersManager$2.class differ
+[1mdiff --git a/bin/UserIntroDates/PassengersManager.class b/bin/UserIntroDates/PassengersManager.class[m
+[1mnew file mode 100644[m
+[1mindex 0000000..2f5eb18[m
+Binary files /dev/null and b/bin/UserIntroDates/PassengersManager.class differ
+[1mdiff --git a/bin/UserIntroDates/SignUpFrame.class b/bin/UserIntroDates/SignUpFrame.class[m
+[1mnew file mode 100644[m
+[1mindex 0000000..453d80b[m
+Binary files /dev/null and b/bin/UserIntroDates/SignUpFrame.class differ
+[1mdiff --git a/bin/UserIntroDates/TextFieldException.class b/bin/UserIntroDates/TextFieldException.class[m
+[1mnew file mode 100644[m
+[1mindex 0000000..147be9c[m
+Binary files /dev/null and b/bin/UserIntroDates/TextFieldException.class differ
+[1mdiff --git a/bin/UserIntroDates/TicketsManager$1.class b/bin/UserIntroDates/TicketsManager$1.class[m
+[1mnew file mode 100644[m
+[1mindex 0000000..c93eddf[m
+Binary files /dev/null and b/bin/UserIntroDates/TicketsManager$1.class differ
+[1mdiff --git a/bin/UserIntroDates/TicketsManager.class b/bin/UserIntroDates/TicketsManager.class[m
+[1mnew file mode 100644[m
+[1mindex 0000000..3fadc69[m
+Binary files /dev/null and b/bin/UserIntroDates/TicketsManager.class differ
+[1mdiff --git a/bin/libs/JPlanner.jar b/bin/libs/JPlanner.jar[m
+[1mnew file mode 100644[m
+[1mindex 0000000..855d238[m
+Binary files /dev/null and b/bin/libs/JPlanner.jar differ
+[1mdiff --git a/flights_info_flights.sql b/flights_info_flights.sql[m
+[1mnew file mode 100644[m
+[1mindex 0000000..36c8e7a[m
+[1m--- /dev/null[m
+[1m+++ b/flights_info_flights.sql[m
+[36m@@ -0,0 +1,54 @@[m
+[32m+[m[32m-- MySQL dump 10.13  Distrib 8.0.29, for Win64 (x86_64)[m
+[32m+[m[32m--[m
+[32m+[m[32m-- Host: 127.0.0.1    Database: flights_info[m
+[32m+[m[32m-- ------------------------------------------------------[m
+[32m+[m[32m-- Server version	8.0.29[m
+[32m+[m
+[32m+[m[32m/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;[m
+[32m+[m[32m/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;[m
+[32m+[m[32m/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;[m
+[32m+[m[32m/*!50503 SET NAMES utf8 */;[m
+[32m+[m[32m/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;[m
+[32m+[m[32m/*!40103 SET TIME_ZONE='+00:00' */;[m
+[32m+[m[32m/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;[m
+[32m+[m[32m/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;[m
+[32m+[m[32m/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;[m
+[32m+[m[32m/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;[m
+[32m+[m
+[32m+[m[32m--[m
+[32m+[m[32m-- Table structure for table `flights`[m
+[32m+[m[32m--[m
+[32m+[m
+[32m+[m[32mDROP TABLE IF EXISTS `flights`;[m
+[32m+[m[32m/*!40101 SET @saved_cs_client     = @@character_set_client */;[m
+[32m+[m[32m/*!50503 SET character_set_client = utf8mb4 */;[m
+[32m+[m[32mCREATE TABLE `flights` ([m
+[32m+[m[32m  `id` varchar(45) NOT NULL,[m
+[32m+[m[32m  `source` varchar(45) NOT NULL,[m
+[32m+[m[32m  `destination` varchar(45) NOT NULL,[m
+[32m+[m[32m  `takeof_date` varchar(45) NOT NULL,[m
+[32m+[m[32m  `seats` int NOT NULL,[m
+[32m+[m[32m  PRIMARY KEY (`id`)[m
+[32m+[m[32m) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;[m
+[32m+[m[32m/*!40101 SET character_set_client = @saved_cs_client */;[m
+[32m+[m
+[32m+[m[32m--[m
+[32m+[m[32m-- Dumping data for table `flights`[m
+[32m+[m[32m--[m
+[32m+[m
+[32m+[m[32mLOCK TABLES `flights` WRITE;[m
+[32m+[m[32m/*!40000 ALTER TABLE `flights` DISABLE KEYS */;[m
+[32m+[m[32mINSERT INTO `flights` VALUES ('1','Berlin','Belgrad','2022-08-04',3131),('1213','Roma','Roma','2024-11-03',322),('123','Berlin','Belgrad','2022-01-01',1232),('123123123','Roma','Roma','2022-01-01',112123),('2','Roma','Belgrad','2022-09-17',10),('3','Berlin','Roma','2022-08-05',13),('ca2000','Roma','Belgrad','2022-11-09',110),('kj2009','Roma','Bacau','2024-09-12',98),('me13232','Bacau','Bucuresti','2024-10-16',90);[m
+[32m+[m[32m/*!40000 ALTER TABLE `flights` ENABLE KEYS */;[m
+[32m+[m[32mUNLOCK TABLES;[m
+[32m+[m[32m/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;[m
+[32m+[m
+[32m+[m[32m/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;[m
+[32m+[m[32m/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;[m
+[32m+[m[32m/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;[m
+[32m+[m[32m/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;[m
+[32m+[m[32m/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;[m
+[32m+[m[32m/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;[m
+[32m+[m[32m/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;[m
+[32m+[m
+[32m+[m[32m-- Dump completed on 2022-09-18 12:45:31[m
+[1mdiff --git a/jcalendar-1.4.jar b/jcalendar-1.4.jar[m
+[1mnew file mode 100644[m
+[1mindex 0000000..617a335[m
+Binary files /dev/null and b/jcalendar-1.4.jar differ
+[1mdiff --git a/menuIcon.jpg b/menuIcon.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..dad5a92[m
+Binary files /dev/null and b/menuIcon.jpg differ
+[1mdiff --git a/mysql-connector-java-8.0.28.jar b/mysql-connector-java-8.0.28.jar[m
+[1mnew file mode 100644[m
+[1mindex 0000000..ac8904e[m
+Binary files /dev/null and b/mysql-connector-java-8.0.28.jar differ
+[1mdiff --git a/passagers_cancellations.sql b/passagers_cancellations.sql[m
+[1mnew file mode 100644[m
+[1mindex 0000000..8d637e3[m
+[1m--- /dev/null[m
+[1m+++ b/passagers_cancellations.sql[m
+[36m@@ -0,0 +1,54 @@[m
+[32m+[m[32m-- MySQL dump 10.13  Distrib 8.0.29, for Win64 (x86_64)[m
+[32m+[m[32m--[m
+[32m+[m[32m-- Host: 127.0.0.1    Database: passagers[m
+[32m+[m[32m-- ------------------------------------------------------[m
+[32m+[m[32m-- Server version	8.0.29[m
+[32m+[m
+[32m+[m[32m/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;[m
+[32m+[m[32m/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;[m
+[32m+[m[32m/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;[m
+[32m+[m[32m/*!50503 SET NAMES utf8 */;[m
+[32m+[m[32m/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;[m
+[32m+[m[32m/*!40103 SET TIME_ZONE='+00:00' */;[m
+[32m+[m[32m/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;[m
+[32m+[m[32m/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;[m
+[32m+[m[32m/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;[m
+[32m+[m[32m/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;[m
+[32m+[m
+[32m+[m[32m--[m
+[32m+[m[32m-- Table structure for table `cancellations`[m
+[32m+[m[32m--[m
+[32m+[m
+[32m+[m[32mDROP TABLE IF EXISTS `cancellations`;[m
+[32m+[m[32m/*!40101 SET @saved_cs_client     = @@character_set_client */;[m
+[32m+[m[32m/*!50503 SET character_set_client = utf8mb4 */;[m
+[32m+[m[32mCREATE TABLE `cancellations` ([m
+[32m+[m[32m  `cancellation_ID` int NOT NULL AUTO_INCREMENT,[m
+[32m+[m[32m  `ticket_ID` varchar(45) NOT NULL,[m
+[32m+[m[32m  `flight_ID` varchar(45) NOT NULL,[m
+[32m+[m[32m  `flight_date` varchar(45) NOT NULL,[m
+[32m+[m[32m  PRIMARY KEY (`cancellation_ID`),[m
+[32m+[m[32m  UNIQUE KEY `idnew_table_UNIQUE` (`cancellation_ID`)[m
+[32m+[m[32m) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;[m
+[32m+[m[32m/*!40101 SET character_set_client = @saved_cs_client */;[m
+[32m+[m
+[32m+[m[32m--[m
+[32m+[m[32m-- Dumping data for table `cancellations`[m
+[32m+[m[32m--[m
+[32m+[m
+[32m+[m[32mLOCK TABLES `cancellations` WRITE;[m
+[32m+[m[32m/*!40000 ALTER TABLE `cancellations` DISABLE KEYS */;[m
+[32m+[m[32mINSERT INTO `cancellations` VALUES (1,'1','1','2022-08-04'),(2,'3','2','2022-09-17'),(3,'2','123','2022-01-01');[m
+[32m+[m[32m/*!40000 ALTER TABLE `cancellations` ENABLE KEYS */;[m
+[32m+[m[32mUNLOCK TABLES;[m
+[32m+[m[32m/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;[m
+[32m+[m
+[32m+[m[32m/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;[m
+[32m+[m[32m/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;[m
+[32m+[m[32m/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;[m
+[32m+[m[32m/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;[m
+[32m+[m[32m/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;[m
+[32m+[m[32m/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;[m
+[32m+[m[32m/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;[m
+[32m+[m
+[32m+[m[32m-- Dump completed on 2022-09-18 12:45:31[m
+[1mdiff --git a/passagers_passagers_info.sql b/passagers_passagers_info.sql[m
+[1mnew file mode 100644[m
+[1mindex 0000000..f11d058[m
+[1m--- /dev/null[m
+[1m+++ b/passagers_passagers_info.sql[m
+[36m@@ -0,0 +1,56 @@[m
+[32m+[m[32m-- MySQL dump 10.13  Distrib 8.0.29, for Win64 (x86_64)[m
+[32m+[m[32m--[m
+[32m+[m[32m-- Host: 127.0.0.1    Database: passagers[m
+[32m+[m[32m-- ------------------------------------------------------[m
+[32m+[m[32m-- Server version	8.0.29[m
+[32m+[m
+[32m+[m[32m/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;[m
+[32m+[m[32m/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;[m
+[32m+[m[32m/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;[m
+[32m+[m[32m/*!50503 SET NAMES utf8 */;[m
+[32m+[m[32m/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;[m
+[32m+[m[32m/*!40103 SET TIME_ZONE='+00:00' */;[m
+[32m+[m[32m/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;[m
+[32m+[m[32m/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;[m
+[32m+[m[32m/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;[m
+[32m+[m[32m/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;[m
+[32m+[m
+[32m+[m[32m--[m
+[32m+[m[32m-- Table structure for table `passagers_info`[m
+[32m+[m[32m--[m
+[32m+[m
+[32m+[m[32mDROP TABLE IF EXISTS `passagers_info`;[m
+[32m+[m[32m/*!40101 SET @saved_cs_client     = @@character_set_client */;[m
+[32m+[m[32m/*!50503 SET character_set_client = utf8mb4 */;[m
+[32m+[m[32mCREATE TABLE `passagers_info` ([m
+[32m+[m[32m  `id` int NOT NULL AUTO_INCREMENT,[m
+[32m+[m[32m  `passager_name` varchar(45) NOT NULL,[m
+[32m+[m[32m  `nationality` varchar(45) NOT NULL,[m
+[32m+[m[32m  `gender` varchar(45) NOT NULL,[m
+[32m+[m[32m  `passport_number` varchar(45) NOT NULL,[m
+[32m+[m[32m  `adress` varchar(45) NOT NULL,[m
+[32m+[m[32m  `phone` varchar(45) NOT NULL,[m
+[32m+[m[32m  PRIMARY KEY (`id`)[m
+[32m+[m[32m) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;[m
+[32m+[m[32m/*!40101 SET character_set_client = @saved_cs_client */;[m
+[32m+[m
+[32m+[m[32m--[m
+[32m+[m[32m-- Dumping data for table `passagers_info`[m
+[32m+[m[32m--[m
+[32m+[m
+[32m+[m[32mLOCK TABLES `passagers_info` WRITE;[m
+[32m+[m[32m/*!40000 ALTER TABLE `passagers_info` DISABLE KEYS */;[m
+[32m+[m[32mINSERT INTO `passagers_info` VALUES (4,'Stefanuca','Andorra','Female','MA3222','Maimutelor','322131321'),(5,'Matei','Romanian','Male','RO1222','Bicaz','075646324'),(6,'ALEXANDRU','Armenia','Male','AR12332','Milcov','075433321'),(8,'GICA','Austria','Female','KP00998','OITMMM','0988879098');[m
+[32m+[m[32m/*!40000 ALTER TABLE `passagers_info` ENABLE KEYS */;[m
+[32m+[m[32mUNLOCK TABLES;[m
+[32m+[m[32m/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;[m
+[32m+[m
+[32m+[m[32m/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;[m
+[32m+[m[32m/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;[m
+[32m+[m[32m/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;[m
+[32m+[m[32m/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;[m
+[32m+[m[32m/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;[m
+[32m+[m[32m/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;[m
+[32m+[m[32m/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;[m
+[32m+[m
+[32m+[m[32m-- Dump completed on 2022-09-18 12:45:31[m
+[1mdiff --git a/passagers_tickets.sql b/passagers_tickets.sql[m
+[1mnew file mode 100644[m
+[1mindex 0000000..3465a14[m
+[1m--- /dev/null[m
+[1m+++ b/passagers_tickets.sql[m
+[36m@@ -0,0 +1,57 @@[m
+[32m+[m[32m-- MySQL dump 10.13  Distrib 8.0.29, for Win64 (x86_64)[m
+[32m+[m[32m--[m
+[32m+[m[32m-- Host: 127.0.0.1    Database: passagers[m
+[32m+[m[32m-- ------------------------------------------------------[m
+[32m+[m[32m-- Server version	8.0.29[m
+[32m+[m
+[32m+[m[32m/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;[m
+[32m+[m[32m/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;[m
+[32m+[m[32m/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;[m
+[32m+[m[32m/*!50503 SET NAMES utf8 */;[m
+[32m+[m[32m/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;[m
+[32m+[m[32m/*!40103 SET TIME_ZONE='+00:00' */;[m
+[32m+[m[32m/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;[m
+[32m+[m[32m/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;[m
+[32m+[m[32m/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;[m
+[32m+[m[32m/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;[m
+[32m+[m
+[32m+[m[32m--[m
+[32m+[m[32m-- Table structure for table `tickets`[m
+[32m+[m[32m--[m
+[32m+[m
+[32m+[m[32mDROP TABLE IF EXISTS `tickets`;[m
+[32m+[m[32m/*!40101 SET @saved_cs_client     = @@character_set_client */;[m
+[32m+[m[32m/*!50503 SET character_set_client = utf8mb4 */;[m
+[32m+[m[32mCREATE TABLE `tickets` ([m
+[32m+[m[32m  `ticket_ID` int NOT NULL AUTO_INCREMENT,[m
+[32m+[m[32m  `passager_ID` varchar(45) NOT NULL,[m
+[32m+[m[32m  `passager_name` varchar(45) NOT NULL,[m
+[32m+[m[32m  `flight_id` varchar(45) NOT NULL,[m
+[32m+[m[32m  `gender` varchar(45) NOT NULL,[m
+[32m+[m[32m  `passport_number` varchar(45) NOT NULL,[m
+[32m+[m[32m  `nationality` varchar(45) NOT NULL,[m
+[32m+[m[32m  PRIMARY KEY (`ticket_ID`,`passager_ID`,`flight_id`),[m
+[32m+[m[32m  UNIQUE KEY `idtickets_UNIQUE` (`ticket_ID`)[m
+[32m+[m[32m) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;[m
+[32m+[m[32m/*!40101 SET character_set_client = @saved_cs_client */;[m
+[32m+[m
+[32m+[m[32m--[m
+[32m+[m[32m-- Dumping data for table `tickets`[m
+[32m+[m[32m--[m
+[32m+[m
+[32m+[m[32mLOCK TABLES `tickets` WRITE;[m
+[32m+[m[32m/*!40000 ALTER TABLE `tickets` DISABLE KEYS */;[m
+[32m+[m[32mINSERT INTO `tickets` VALUES (1,'4','Stefanuca','1','Female','MA3222','Andorra'),(2,'4','Stefanuca','123','Female','MA3222','Andorra'),(3,'6','Marian','2','Male','AR12332','Armenia'),(4,'5','Matei','123','Male','RO1222','Romanian'),(5,'6','ALEXANDRU','3','Male','AR12332','Armenia'),(6,'6','ALEXANDRU','kj2009','Male','AR12332','Armenia');[m
+[32m+[m[32m/*!40000 ALTER TABLE `tickets` ENABLE KEYS */;[m
+[32m+[m[32mUNLOCK TABLES;[m
+[32m+[m[32m/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;[m
+[32m+[m
+[32m+[m[32m/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;[m
+[32m+[m[32m/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;[m
+[32m+[m[32m/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;[m
+[32m+[m[32m/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;[m
+[32m+[m[32m/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;[m
+[32m+[m[32m/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;[m
+[32m+[m[32m/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;[m
+[32m+[m
+[32m+[m[32m-- Dump completed on 2022-09-18 12:45:31[m
+[1mdiff --git a/src/UserIntroDates/.idea/.gitignore b/src/UserIntroDates/.idea/.gitignore[m
+[1mnew file mode 100644[m
+[1mindex 0000000..26d3352[m
+[1m--- /dev/null[m
+[1m+++ b/src/UserIntroDates/.idea/.gitignore[m
+[36m@@ -0,0 +1,3 @@[m
+[32m+[m[32m# Default ignored files[m
+[32m+[m[32m/shelf/[m
+[32m+[m[32m/workspace.xml[m
+[1mdiff --git a/src/UserIntroDates/.idea/UserIntroDates.iml b/src/UserIntroDates/.idea/UserIntroDates.iml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..d6ebd48[m
+[1m--- /dev/null[m
+[1m+++ b/src/UserIntroDates/.idea/UserIntroDates.iml[m
+[36m@@ -0,0 +1,9 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
+[32m+[m[32m<module type="JAVA_MODULE" version="4">[m
+[32m+[m[32m  <component name="NewModuleRootManager" inherit-compiler-output="true">[m
+[32m+[m[32m    <exclude-output />[m
+[32m+[m[32m    <content url="file://$MODULE_DIR$" />[m
+[32m+[m[32m    <orderEntry type="inheritedJdk" />[m
+[32m+[m[32m    <orderEntry type="sourceFolder" forTests="false" />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m</module>[m
+\ No newline at end of file[m
+[1mdiff --git a/src/UserIntroDates/.idea/modules.xml b/src/UserIntroDates/.idea/modules.xml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e27b9ad[m
+[1m--- /dev/null[m
+[1m+++ b/src/UserIntroDates/.idea/modules.xml[m
+[36m@@ -0,0 +1,8 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
+[32m+[m[32m<project version="4">[m
+[32m+[m[32m  <component name="ProjectModuleManager">[m
+[32m+[m[32m    <modules>[m
+[32m+[m[32m      <module fileurl="file://$PROJECT_DIR$/.idea/UserIntroDates.iml" filepath="$PROJECT_DIR$/.idea/UserIntroDates.iml" />[m
+[32m+[m[32m    </modules>[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m</project>[m
+\ No newline at end of file[m
+[1mdiff --git a/src/UserIntroDates/Cancelattion.java b/src/UserIntroDates/Cancelattion.java[m
+[1mnew file mode 100644[m
+[1mindex 0000000..b885949[m
+[1m--- /dev/null[m
+[1m+++ b/src/UserIntroDates/Cancelattion.java[m
+[36m@@ -0,0 +1,401 @@[m
+[32m+[m[32mpackage UserIntroDates;[m
+[32m+[m
+[32m+[m
+[32m+[m[32mimport java.awt.Color;[m
+[32m+[m
+[32m+[m
+[32m+[m[32mimport java.awt.Dimension;[m
+[32m+[m[32mimport java.awt.Font;[m
+[32m+[m[32mimport java.awt.Toolkit;[m
+[32m+[m[32mimport java.awt.FlowLayout;[m
+[32m+[m[32mimport java.awt.Insets;[m
+[32m+[m[32mimport java.awt.GridBagLayout;[m
+[32m+[m[32mimport java.awt.GridBagConstraints;[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m[32mimport javax.swing.ImageIcon;[m
+[32m+[m[32mimport javax.swing.JButton;[m
+[32m+[m[32mimport javax.swing.JComboBox;[m
+[32m+[m[32mimport javax.swing.JFrame;[m
+[32m+[m[32mimport javax.swing.JLabel;[m
+[32m+[m[32mimport javax.swing.JOptionPane;[m
+[32m+[m[32mimport javax.swing.JPanel;[m
+[32m+[m[32mimport javax.swing.JScrollPane;[m
+[32m+[m[32mimport javax.swing.JTable;[m
+[32m+[m[32mimport javax.swing.JTextField;[m
+[32m+[m
+[32m+[m[32mimport javax.swing.table.DefaultTableModel;[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m[32mimport net.proteanit.sql.DbUtils;[m
+[32m+[m
+[32m+[m[32mimport java.awt.event.ActionEvent;[m
+[32m+[m[32mimport java.awt.event.ActionListener;[m
+[32m+[m[32mimport java.sql.Connection;[m
+[32m+[m[32mimport java.sql.DriverManager;[m
+[32m+[m[32mimport java.sql.PreparedStatement;[m
+[32m+[m[32mimport java.sql.ResultSet;[m
+[32m+[m[32mimport java.sql.SQLException;[m
+[32m+[m[32mimport java.sql.Statement;[m
+[32m+[m[32mimport java.util.ArrayList;[m
+[32m+[m[32mimport java.util.List;[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m[32mpublic class Cancelattion extends JFrame implements ActionListener {[m
+[32m+[m
+[32m+[m	[32m/**[m
+[32m+[m	[32m *[m[41m [m
+[32m+[m	[32m */[m
+[32m+[m	[32mprivate static final long serialVersionUID = 1L;[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m	[32mprivate JLabel title;[m
+[32m+[m[41m	[m
+[32m+[m	[32mprivate JLabel TicketID;[m
+[32m+[m	[32m private JLabel FlightCode;[m
+[32m+[m[41m	 [m
+[32m+[m
+[32m+[m
+[32m+[m[41m	[m
+[32m+[m	[32m// all panels[m
+[32m+[m	[32mprivate JPanel Title;[m
+[32m+[m	[32mprivate JPanel SelectButtons;[m
+[32m+[m	[32mprivate JPanel ButtonsPane;[m
+[32m+[m	[32mprivate JScrollPane ScrollTabelPane;[m
+[32m+[m	[32mprivate JPanel SelectArea;[m
+[32m+[m[41m	[m
+[32m+[m[41m	[m
+[32m+[m	[32m//Select fields[m
+[32m+[m	[32mprivate static JComboBox<String> ticketID;[m
+[32m+[m	[32mprivate static JTextField flightCode;[m
+[32m+[m[41m	[m
+[32m+[m
+[32m+[m[41m	[m
+[32m+[m	[32m// sSelectLabels.elect buttons[m
+[32m+[m	[32mprivate JButton cancel;[m
+[32m+[m	[32mprivate JButton reset;[m
+[32m+[m	[32mprivate JButton back;[m
+[32m+[m
+[32m+[m	[32mprivate JPanel mainTablePane;[m
+[32m+[m	[32mprivate JTable table;[m
+[32m+[m	[32mprivate Object[] columns={};[m
+[32m+[m	[32mprivate DefaultTableModel model;[m
+[32m+[m[41m	[m
+[32m+[m[41m	[m
+[32m+[m[41m	[m
+[32m+[m	[32mprivate GridBagConstraints gbc;[m
+[32m+[m[41m	[m
+[32m+[m	[32mCancelattion(){[m
+[32m+[m[41m		[m
+[32m+[m		[32minitFrame();[m
+[32m+[m		[32mDisplayItems();[m
+[32m+[m
+[32m+[m	[32m}[m
+[32m+[m
+[32m+[m[41m	[m
+[32m+[m	[32mprivate void initFrame() {[m
+[32m+[m		[32mImageIcon icon=new ImageIcon("AirplaneIcon.png");[m
+[32m+[m[41m		[m
+[32m+[m		[32msetIconImage(icon.getImage());[m
+[32m+[m		[32mgetContentPane().setLayout(null);[m
+[32m+[m		[32msetDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);[m
+[32m+[m		[32msetSize(800,550);[m
+[32m+[m		[32msetResizable(false);[m
+[32m+[m		[32mDimension dim = Toolkit.getDefaultToolkit().getScreenSize();[m
+[32m+[m		[32msetLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);[m
+[32m+[m[41m		[m
+[32m+[m		[32mtitle=new JLabel("Tickets Booking");[m
+[32m+[m		[32mtitle.setFont(new Font("Oswald",Font.BOLD,20));[m
+[32m+[m		[32mTitle=new JPanel();[m
+[32m+[m		[32mTitle.add(title);[m
+[32m+[m		[32mTitle.setBounds(0,0,800,100);[m
+[32m+[m[41m		[m
+[32m+[m		[32mTicketID=new JLabel("Ticket ID");[m
+[32m+[m		[32mFlightCode=new JLabel("Flight Code");[m[41m [m
+[32m+[m[41m		[m
+[32m+[m[41m	[m
+[32m+[m
+[32m+[m[41m		[m
+[32m+[m		[32mticketID=new JComboBox<String>(getTicketsId());[m
+[32m+[m		[32mticketID.addActionListener(this);[m
+[32m+[m
+[32m+[m[41m		[m
+[32m+[m		[32mflightCode=new JTextField(20);[m
+[32m+[m		[32mflightCode.setEditable(false);[m
+[32m+[m[41m	[m
+[32m+[m
+[32m+[m		[32mgbc=new GridBagConstraints();[m
+[32m+[m		[32mgbc.fill=GridBagConstraints.HORIZONTAL;[m
+[32m+[m		[32mgbc.ipadx=25;[m
+[32m+[m		[32mgbc.ipady=5;[m
+[32m+[m		[32mgbc.insets=new Insets(5,5,5,5);[m
+[32m+[m
+[32m+[m		[32mSelectButtons=new JPanel();[m
+[32m+[m		[32mSelectButtons.setLayout(new GridBagLayout());[m[41m [m
+[32m+[m		[32mSelectButtons.setPreferredSize(new Dimension(1000,100));[m
+[32m+[m		[32mgbc.gridx=0;[m
+[32m+[m		[32mgbc.gridy=0;[m
+[32m+[m		[32mSelectButtons.add(TicketID,gbc);[m
+[32m+[m		[32mgbc.gridx=1;[m
+[32m+[m		[32mgbc.gridy=0;[m
+[32m+[m		[32mSelectButtons.add(FlightCode,gbc);[m
+[32m+[m[41m		[m
+[32m+[m[41m		[m
+[32m+[m		[32mgbc.gridx=0;[m
+[32m+[m		[32mgbc.gridy=1;[m
+[32m+[m		[32mSelectButtons.add(ticketID,gbc);[m
+[32m+[m		[32mgbc.gridx=1;[m
+[32m+[m		[32mgbc.gridy=1;[m
+[32m+[m		[32mSelectButtons.add(flightCode,gbc);[m
+[32m+[m[41m		[m
+[32m+[m[41m		[m
+[32m+[m		[32mcancel=new JButton("Cancel");[m[41m  [m
+[32m+[m		[32mreset=new JButton("Reset");[m[41m  [m
+[32m+[m		[32mback=new JButton("Back");[m[41m  [m
+[32m+[m[41m		[m
+[32m+[m		[32mcancel.addActionListener(this);[m
+[32m+[m		[32mreset.addActionListener(this);[m
+[32m+[m		[32mback.addActionListener(this);[m
+[32m+[m[41m		[m
+[32m+[m		[32mButtonsPane=new JPanel();[m
+[32m+[m		[32mButtonsPane.setLayout(new FlowLayout());[m
+[32m+[m		[32mButtonsPane.add(cancel);[m
+[32m+[m		[32mButtonsPane.add(reset);[m
+[32m+[m		[32mButtonsPane.add(back);[m
+[32m+[m
+[32m+[m		[32mSelectArea=new JPanel();[m
+[32m+[m		[32mSelectArea.setLayout(new GridBagLayout());[m
+[32m+[m		[32mgbc.gridx=0;[m
+[32m+[m		[32mgbc.gridy=0;[m
+[32m+[m		[32mSelectArea.add(SelectButtons,gbc);[m
+[32m+[m		[32mgbc.gridx=0;[m
+[32m+[m		[32mgbc.gridy=1;[m
+[32m+[m
+[32m+[m		[32mSelectArea.add(ButtonsPane,gbc);[m
+[32m+[m		[32mSelectArea.setBounds(0,100,800,120);[m
+[32m+[m
+[32m+[m		[32mmodel=new DefaultTableModel() {[m
+[32m+[m			[32m/**[m
+[32m+[m			[32m *[m[41m [m
+[32m+[m			[32m */[m
+[32m+[m			[32mprivate static final long serialVersionUID = 1L;[m
+[32m+[m
+[32m+[m			[32m@Override[m
+[32m+[m			[32m public boolean isCellEditable(int row, int column) {[m
+[32m+[m			[32m       //all cells false[m
+[32m+[m			[32m       return false;[m
+[32m+[m			[32m    }[m
+[32m+[m		[32m};[m
+[32m+[m		[32mmodel.setColumnIdentifiers(columns);[m
+[32m+[m[41m		[m
+[32m+[m		[32mtable=new JTable();[m
+[32m+[m		[32mtable.setModel(model);[m
+[32m+[m
+[32m+[m[41m		[m
+[32m+[m		[32mmainTablePane=new JPanel(null);[m
+[32m+[m		[32mtable.setFont(new Font("Tahoma",Font.PLAIN,15));[m
+[32m+[m		[32mtable.setBackground(Color.white);[m
+[32m+[m		[32mtable.setForeground(Color.black);[m
+[32m+[m		[32mtable.setGridColor(Color.blue);[m
+[32m+[m		[32mtable.setSelectionBackground(Color.red);[m
+[32m+[m		[32mtable.setSelectionForeground(Color.white);[m
+[32m+[m		[32mtable.setBounds(0,0,600,300);[m
+[32m+[m
+[32m+[m[41m		[m
+[32m+[m		[32mScrollTabelPane=new JScrollPane(table);[m
+[32m+[m		[32mScrollTabelPane.setHorizontalScrollBarPolicy([m
+[32m+[m			[32m    JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);[m
+[32m+[m		[32mScrollTabelPane.setForeground(Color.RED);[m
+[32m+[m		[32mScrollTabelPane.setBackground(Color.white);[m
+[32m+[m		[32mScrollTabelPane.setBounds(25,0,750,250);[m
+[32m+[m		[32mmainTablePane.add(ScrollTabelPane);[m
+[32m+[m		[32mmainTablePane.setBounds(0,250,800,270);[m
+[32m+[m
+[32m+[m[41m	[m
+[32m+[m		[32madd(Title);[m
+[32m+[m		[32madd(SelectArea);[m
+[32m+[m		[32madd(mainTablePane);[m
+[32m+[m
+[32m+[m[41m		[m
+[32m+[m		[32msetVisible(true);[m
+[32m+[m
+[32m+[m	[32m}[m
+[32m+[m[41m	[m
+[32m+[m[41m	[m
+[32m+[m	[32m@Override[m
+[32m+[m	[32mpublic void actionPerformed(ActionEvent e)  {[m
+[32m+[m
+[32m+[m		[32mString FlightCode=flightCode.getText();[m
+[32m+[m		[32mString ticketSelectID=(String)ticketID.getSelectedItem();[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m		[32m//BOOK BUTTON[m[41m [m
+[32m+[m		[32mif(cancel.equals(e.getSource())) { //cancel button action[m
+[32m+[m[41m			[m
+[32m+[m			[32mif(TextFieldEmpty()!=0) {[m
+[32m+[m				[32mtry {[m
+[32m+[m					[32mString date = null;[m
+[32m+[m					[32mConnection connectFlightsDB=DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/flights_info", "root","123456");[m
+[32m+[m					[32mString query="SELECT * FROM flights WHERE id='"+FlightCode+"'";[m
+[32m+[m					[32mStatement st=connectFlightsDB.createStatement();[m
+[32m+[m					[32mResultSet rezSet=st.executeQuery(query);[m
+[32m+[m					[32mif(rezSet.next()) {[m
+[32m+[m						[32m date=rezSet.getString("takeof_date");[m
+[32m+[m					[32m}[m
+[32m+[m					[32mSystem.out.println(date);[m
+[32m+[m[41m					[m
+[32m+[m					[32mConnection connectCancelsDB =DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/passagers", "root","123456"); //connection with database[m
+[32m+[m					[32mquery= "SELECT * FROM cancellations WHERE ticket_ID='"+ticketSelectID+"'";  // the query which get the compatibility between the inputs values and values from database[m
+[32m+[m					[32mPreparedStatement pst= connectCancelsDB.prepareStatement(query); //the statement which have the query[m
+[32m+[m					[32mrezSet=pst.executeQuery(); // variable where I pass in the value of the query[m[41m [m
+[32m+[m[41m					[m
+[32m+[m					[32mif(rezSet.next()) {[m
+[32m+[m						[32mJOptionPane.showMessageDialog(null, "This cancellation already exists !");[m
+[32m+[m
+[32m+[m					[32m}else {[m
+[32m+[m						[32mquery ="INSERT INTO cancellations values("+"'0','"+ticketSelectID+"','"+FlightCode+"','"+ date +"')";//insert values into database[m
+[32m+[m						[32mst=connectCancelsDB.createStatement();[m
+[32m+[m						[32mst.executeUpdate(query);[m
+[32m+[m						[32mJOptionPane.showMessageDialog(null, "Ticket Canceled ! ");[m
+[32m+[m
+[32m+[m
+[32m+[m					[32m}[m
+[32m+[m[41m					[m
+[32m+[m[41m					[m
+[32m+[m[41m					[m
+[32m+[m[41m					[m
+[32m+[m					[32mconnectCancelsDB.close();[m
+[32m+[m					[32mconnectFlightsDB.close();[m
+[32m+[m						[32mDisplayItems();[m
+[32m+[m						[32mClearFields();[m
+[32m+[m
+[32m+[m[41m					[m
+[32m+[m				[32m}catch(Exception e1) {[m
+[32m+[m					[32mSystem.out.println("An exception occured: "+e1);[m
+[32m+[m			[32m}[m
+[32m+[m		[32m}[m
+[32m+[m		[32melse {[m
+[32m+[m			[32mSystem.out.println("Text Field Empty");[m
+[32m+[m		[32m}[m
+[32m+[m[41m			[m
+[32m+[m[41m		[m
+[32m+[m	[32m}[m
+[32m+[m[41m		[m
+[32m+[m		[32m//RESET BUTTON[m[41m [m
+[32m+[m		[32mif(reset.equals(e.getSource())) {[m
+[32m+[m			[32mClearFields();[m
+[32m+[m	[32m}[m
+[32m+[m
+[32m+[m		[32m//BACK BUTTON[m
+[32m+[m		[32mif(back.equals(e.getSource())) {[m
+[32m+[m			[32mClearFields();[m
+[32m+[m			[32msetVisible(false);[m
+[32m+[m			[32mdispose();[m
+[32m+[m			[32mnew FirstPageFrame("MENU");[m
+[32m+[m
+[32m+[m		[32m}[m
+[32m+[m		[32mif(e.getSource()==ticketID) {[m
+[32m+[m			[32mGetTicketsData();[m
+[32m+[m		[32m}[m
+[32m+[m[41m		[m
+[32m+[m[32m}[m
+[32m+[m[32m//END ACTION LISTENER[m[41m 	[m
+[32m+[m[41m	[m
+[32m+[m[41m	[m
+[32m+[m	[32m//	Function for verify if text fields are filled[m
+[32m+[m	[32mstatic int TextFieldEmpty() {[m
+[32m+[m[41m		[m
+[32m+[m
+[32m+[m[41m		[m
+[32m+[m		[32mif(flightCode.getText().equals("")) {[m
+[32m+[m[41m			[m
+[32m+[m				[32mJOptionPane.showMessageDialog(null, "Text Field Empty!", "Warrning",JOptionPane.WARNING_MESSAGE);[m
+[32m+[m				[32mreturn 0;[m
+[32m+[m[41m			[m
+[32m+[m		[32m}[m
+[32m+[m[41m		[m
+[32m+[m[41m		[m
+[32m+[m		[32mreturn 1;[m
+[32m+[m[41m		[m
+[32m+[m	[32m}[m
+[32m+[m[41m	[m
+[32m+[m[41m	[m
+[32m+[m	[32m//	function for clear the fields[m
+[32m+[m	[32mprivate static void ClearFields() {[m
+[32m+[m		[32mflightCode.setText("");[m
+[32m+[m
+[32m+[m	[32m}[m
+[32m+[m[41m	[m
+[32m+[m[41m	[m
+[32m+[m[41m	[m
+[32m+[m	[32m//Function for rewrite the table if a value has changed[m
+[32m+[m	[32mpublic void DisplayItems() {[m
+[32m+[m[41m		[m
+[32m+[m				[32mtry {[m
+[32m+[m					[32mConnection connection =DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/passagers", "root","123456"); //connection with database[m
+[32m+[m					[32mString query= "SELECT * FROM cancellations ";  // the query which get the compatibility between the inputs values and values from database[m
+[32m+[m					[32mStatement st= connection.createStatement();[m
+[32m+[m					[32mResultSet rs=st.executeQuery(query);[m
+[32m+[m					[32mtable.setModel(DbUtils.resultSetToTableModel(rs));[m
+[32m+[m
+[32m+[m[41m					[m
+[32m+[m				[32m}catch(Exception e) {[m
+[32m+[m					[32me.printStackTrace();[m
+[32m+[m				[32m}[m[41m	[m
+[32m+[m		[32m}[m
+[32m+[m[41m	[m
+[32m+[m	[32m// function for get all passagers IDs from DataBase Id to pass into the ComboBox[m
+[32m+[m	[32mprivate static String[] getTicketsId() {[m
+[32m+[m		[32mConnection connection;[m
+[32m+[m		[32mString query;[m
+[32m+[m		[32mStatement st;[m
+[32m+[m		[32mResultSet rs;[m
+[32m+[m		[32mList<String> values=new ArrayList<String>();[m
+[32m+[m		[32mtry {[m
+[32m+[m			[32mconnection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/passagers", "root","123456");[m
+[32m+[m			[32mquery= "SELECT ticket_id FROM tickets  ";  // the query which get the passagers Ids[m
+[32m+[m			[32mst= connection.createStatement();[m
+[32m+[m			[32mrs=st.executeQuery(query);[m
+[32m+[m			[32mwhile(rs.next()) {[m
+[32m+[m				[32mvalues.add(String.valueOf(rs.getInt("ticket_id")));[m
+[32m+[m			[32m}[m
+[32m+[m		[32m} catch (SQLException e) {[m
+[32m+[m			[32me.printStackTrace();[m
+[32m+[m		[32m} //connection with database[m
+[32m+[m
+[32m+[m			[32mString[] returnValues=new String[values.size()];[m
+[32m+[m			[32mvalues.toArray(returnValues);[m
+[32m+[m			[32mreturn returnValues;[m
+[32m+[m[41m		[m
+[32m+[m	[32m}[m
+[32m+[m[41m	[m
+[32m+[m[41m	[m
+[32m+[m[41m	[m
+[32m+[m	[32mprivate static void GetTicketsData() {[m
+[32m+[m		[32mConnection connection;[m
+[32m+[m		[32mString query;[m
+[32m+[m		[32mStatement st;[m
+[32m+[m		[32mResultSet rs;[m
+[32m+[m		[32mtry {[m
+[32m+[m			[32mconnection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/passagers", "root","123456");[m
+[32m+[m			[32mquery= "SELECT * FROM tickets WHERE ticket_id='"+ticketID.getSelectedItem().toString()+"'";  // the query which get the passagers Ids[m
+[32m+[m			[32mst= connection.createStatement();[m
+[32m+[m			[32mrs=st.executeQuery(query);[m
+[32m+[m			[32mif(rs.next()) {[m
+[32m+[m				[32mflightCode.setText(rs.getString("flight_id"));[m
+[32m+[m			[32m}[m
+[32m+[m		[32m} catch (SQLException e) {[m
+[32m+[m			[32me.printStackTrace();[m
+[32m+[m		[32m} //connection with database[m
+[32m+[m
+[32m+[m	[32m}[m
+[32m+[m
+[32m+[m[32m}[m
+[1mdiff --git a/src/UserIntroDates/FirstPageFrame.java b/src/UserIntroDates/FirstPageFrame.java[m
+[1mnew file mode 100644[m
+[1mindex 0000000..c3cedd9[m
+[1m--- /dev/null[m
+[1m+++ b/src/UserIntroDates/FirstPageFrame.java[m
+[36m@@ -0,0 +1,106 @@[m
+[32m+[m[32mpackage UserIntroDates;[m
+[32m+[m
+[32m+[m[32mimport javax.swing.ImageIcon;[m
+[32m+[m
+[32m+[m[32mimport javax.swing.JButton;[m
+[32m+[m[32mimport javax.swing.JFrame;[m
+[32m+[m[32mimport javax.swing.JLabel;[m
+[32m+[m[32mimport javax.swing.JPanel;[m
+[32m+[m
+[32m+[m[32mimport java.awt.FlowLayout;[m
+[32m+[m[32mimport java.awt.GridBagLayout;[m
+[32m+[m[32mimport java.awt.Toolkit;[m
+[32m+[m[32mimport java.awt.BorderLayout;[m
+[32m+[m[32mimport java.awt.Color;[m
+[32m+[m[32mimport java.awt.Component;[m
+[32m+[m[32mimport java.awt.Dimension;[m
+[32m+[m[32mimport java.awt.event.ActionEvent;[m
+[32m+[m[32mimport java.awt.event.ActionListener;[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m[32mpublic class FirstPageFrame extends JFrame implements ActionListener{[m
+[32m+[m
+[32m+[m	[32mJLabel midImage;[m
+[32m+[m[41m	[m
+[32m+[m	[32mJPanel imgPanel;[m
+[32m+[m	[32mJPanel btnPanel;[m
+[32m+[m[41m	[m
+[32m+[m	[32mJButton flights;[m
+[32m+[m	[32mJButton passangers;[m
+[32m+[m	[32mJButton tickets;[m
+[32m+[m	[32mJButton cancellation;[m
+[32m+[m
+[32m+[m[41m	[m
+[32m+[m[41m	[m
+[32m+[m	[32mFirstPageFrame(){};[m
+[32m+[m[41m	[m
+[32m+[m	[32mFirstPageFrame(String message) {[m
+[32m+[m		[32msuper(message);[m
+[32m+[m		[32mImageIcon icon=new ImageIcon("AirplaneIcon.png");[m
+[32m+[m		[32msetSize(500,250);[m
+[32m+[m		[32msetLayout(new BorderLayout());[m
+[32m+[m		[32msetIconImage(icon.getImage());[m
+[32m+[m		[32msetDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);[m
+[32m+[m		[32msetResizable(false);[m
+[32m+[m		[32mDimension dim = Toolkit.getDefaultToolkit().getScreenSize();[m
+[32m+[m		[32msetLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);[m
+[32m+[m		[32msetVisible(true);[m
+[32m+[m[41m		[m
+[32m+[m		[32micon=new ImageIcon("menuIcon.jpg");[m
+[32m+[m		[32mmidImage=new JLabel();[m
+[32m+[m		[32mmidImage.setIcon(icon);[m
+[32m+[m[41m		[m
+[32m+[m		[32mimgPanel=new JPanel();[m
+[32m+[m		[32mimgPanel.add(midImage);[m
+[32m+[m[41m		[m
+[32m+[m		[32mflights =new JButton("Flights");[m
+[32m+[m		[32mpassangers =new JButton("Passangers");[m
+[32m+[m		[32mtickets =new JButton("Tickets");[m
+[32m+[m		[32mcancellation =new JButton("Cancellation");[m
+[32m+[m
+[32m+[m[41m		[m
+[32m+[m		[32mbtnPanel=new JPanel();[m
+[32m+[m		[32mbtnPanel.setLayout(new FlowLayout());[m
+[32m+[m		[32mbtnPanel.add(flights);[m
+[32m+[m		[32mbtnPanel.add(passangers);[m
+[32m+[m		[32mbtnPanel.add(tickets);[m
+[32m+[m		[32mbtnPanel.add(cancellation);[m
+[32m+[m[41m		[m
+[32m+[m		[32mflights.addActionListener(this);[m
+[32m+[m		[32mpassangers.addActionListener(this);[m
+[32m+[m		[32mtickets.addActionListener(this);[m
+[32m+[m		[32mcancellation.addActionListener(this);[m
+[32m+[m[41m		[m
+[32m+[m		[32madd(imgPanel,BorderLayout.CENTER);[m
+[32m+[m		[32madd(btnPanel,BorderLayout.SOUTH);[m
+[32m+[m
+[32m+[m[41m		[m
+[32m+[m	[32m}[m
+[32m+[m
+[32m+[m	[32m@Override[m
+[32m+[m	[32mpublic void actionPerformed(ActionEvent e) {[m
+[32m+[m
+[32m+[m		[32mif(flights.equals(e.getSource())) {[m
+[32m+[m			[32mFlightsManager FM=new FlightsManager();[m
+[32m+[m			[32msetVisible(false);[m
+[32m+[m			[32mdispose();[m
+[32m+[m		[32m}[m
+[32m+[m		[32mif(passangers.equals(e.getSource())) {[m
+[32m+[m			[32mPassengersManager PM=new PassengersManager();[m
+[32m+[m			[32msetVisible(false);[m
+[32m+[m			[32mdispose();[m
+[32m+[m		[32m}[m
+[32m+[m		[32mif(tickets.equals(e.getSource())) {[m
+[32m+[m			[32mTicketsManager TM=new TicketsManager();[m
+[32m+[m			[32msetVisible(false);[m
+[32m+[m			[32mdispose();[m
+[32m+[m		[32m}[m
+[32m+[m		[32mif(cancellation.equals(e.getSource())) {[m
+[32m+[m			[32mCancelattion CM=new Cancelattion();[m
+[32m+[m			[32msetVisible(false);[m
+[32m+[m			[32mdispose();[m
+[32m+[m		[32m}[m
+[32m+[m	[32m}[m
+[32m+[m[32m}[m
+[1mdiff --git a/src/UserIntroDates/FlightsManager.java b/src/UserIntroDates/FlightsManager.java[m
+[1mnew file mode 100644[m
+[1mindex 0000000..71d0080[m
+[1m--- /dev/null[m
+[1m+++ b/src/UserIntroDates/FlightsManager.java[m
+[36m@@ -0,0 +1,546 @@[m
+[32m+[m[32mpackage UserIntroDates;[m
+[32m+[m
+[32m+[m
+[32m+[m[32mimport java.awt.Color;[m
+[32m+[m[32mimport java.awt.Dimension;[m
+[32m+[m[32mimport java.awt.Font;[m
+[32m+[m[32mimport ja
