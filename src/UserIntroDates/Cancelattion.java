@@ -111,7 +111,7 @@ public class Cancelattion extends JFrame implements ActionListener {
 		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
 		setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
 		
-		title=new JLabel("Tickets Booking");
+		title=new JLabel("Tickets Cancellation");
 		title.setFont(new Font("Oswald",Font.BOLD,20));
 		Title=new JPanel();
 		Title.add(title);
